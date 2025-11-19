@@ -1,0 +1,29 @@
+#Python cache
+__pycache__/
+*.pyc
+
+#venv
+venv/
+.env/
+
+#GIt
+.git/
+.gitignore
+
+#VSCode
+.vscode/
+
+#Docker output
+*.log
+*.pid
+
+#OS file
+.DS_Store
+Thumbs.db
+
+#Database
+*.db
+*.sqlite3
+
+#README・docs以外の不要ファイル
+*.md~
