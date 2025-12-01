@@ -1,11 +1,11 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 DATABASE_URL = "sqlite:///./bbs.db"
 
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread":False}#SQLiteの場合だけ必要
+    connect_args={"check_same_thread": False}  # SQLite の場合だけ必要
 )
 
 SessionLocal = sessionmaker(
@@ -14,9 +14,11 @@ SessionLocal = sessionmaker(
     bind=engine
 )
 
-#===========================
-#DBセッション(依存性注入用)
-#===========================
+Base = declarative_base()
+
+# ==========================
+# DB セッション（依存性注入用）
+# ==========================
 def get_db():
     db = SessionLocal()
     try:
