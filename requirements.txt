@@ -9,3 +9,6 @@ aiosqlite==0.20.0
 
 # ファイルアップロード
 python-multipart==0.0.9
+
+# フロントエンド
+Jinja2==3.1.4
