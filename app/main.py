@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
     title="BBS API",
-    description="Simple Bulletin Board System API"
+    description="Simple Bulletin Board System API",
     version="0.1"
     )
 

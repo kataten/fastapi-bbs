@@ -28,8 +28,13 @@
 
     {% for post in latest_posts %}
         <div>
-            <strong>{{ post.thread_title }} - {{post.author}}</strong><br>
-            {{ post.content }}<br>
+        {% if post.thread_title %}
+            {{post.thread_title}}:<strong>{{post.thread_title}} - {{post.author}}</strong><br>
+        {% else %}
+            {{post.post_number}}:<strong>{{post.author}}</strong><br>
+        {% endif %}
+
+            {{post.content}}<br>
             <small>日時：{{ post.created_at }}</small>
             {% if post.attachment %}
             <div class="attachment">
