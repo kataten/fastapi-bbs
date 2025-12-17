@@ -20,6 +20,11 @@
             </li>
         {% endfor %}
     </ul>
+    <!--ページネーションの共通化-->
+    {% set _page = page %}
+    {% set _total_pages = total_pages}
+    {% set _base_url = "/threads/list" %}
+    {% include "common/pagination.html" %}
 </div>
 
 <!-- 最新投稿（スレッドの先頭10件） -->
