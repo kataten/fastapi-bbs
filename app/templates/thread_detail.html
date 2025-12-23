@@ -19,7 +19,7 @@
     {{first_post.post_number}}:<strong>{{first_post.author}}</strong><br>
     {{first_post.content}}<br>
     <small>{{first_post.created_at}}</small>
-    {% if post.attachment %}
+    {% if first_post.attachment %}
         <div class="attachment">
             <img src="/static/uploads/{{ post.attachment }}"
                 style="max-width: 300px; border: 1px solid #ccc;">
